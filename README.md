@@ -1,5 +1,9 @@
 # silktouch
+![Black text](icons/silktouch_withText.png)
+
 A god-damn simple tool for you to build and maintain a Caddy HTTP server.
+
+![White text](icons/silktouch_withText_white.png)
 
 ## Basic Usage
 * ```./build.sh```: Build seperate configuration files into a single file. Always outputs to ```./silktouch/artifact```.
