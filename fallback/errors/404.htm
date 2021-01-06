@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8" />
+	<meta content="true" name="HandheldFriendly" />
+	<link rel="stylesheet" href="/errors/global.css" />
+	<title>Error {{placeholder "http.error.status_code"}}: Page Not Found</title>
+</head>
+<body>
+	<div class="box-middle">
+		<center class="big-text">{{placeholder "http.error.status_code"}}</center>
+		<hr/>
+		You requested for "<b>{{placeholder "http.request.uri.path"}}</b>" from <b>{{.RemoteIP}}</b>, but sadly, the page does not exist on this server (<b>{{.Host}}</b>).<br/>
+		Please check your spelling if you typed the URL manually. If you are sure that this is an error, please contact server administrators.<br/>
+		<center><a href="/">Home</a></center>
+		<center><small><i>This server is proudly running <a href="https://caddyserver.com/">Caddy</a> with <a href="https://www.pwcq.dev/projects/silktouch/">SilkTouch</a>.</i><small></center>
+	</div>
+</body>

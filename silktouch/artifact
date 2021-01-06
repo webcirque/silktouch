@@ -1,0 +1,24 @@
+{
+	http_port 80
+}
+(tlsconf) {
+	tls internal
+}
+(tryFiles) {
+	try_files {path} {path}.html {path}.htm {path}/
+}
+(errHandler) {
+	handle_errors {
+		rewrite * /errors/{http.error.status_code}.htm
+		file_server
+		templates
+	}
+}
+http://,
+:443 {
+	root * /var/www/fallback
+	file_server
+	templates
+	import tryFiles
+	import errHandler
+}
